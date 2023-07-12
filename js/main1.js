@@ -1,0 +1,124 @@
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //Hamburger Animation
+    hamburger.classList.toggle("toggle");
+});
+
+
+const API_KEY = "499d03534f224e8890dcd1f95376001c"
+const url = "https://newsapi.org/v2/everything?q="
+
+
+
+async function fetchData(query){
+    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`)
+    const data = await res.json()
+    return data
+}
+fetchData("all").then(data => renderMain(data.articles))
+
+//menu btn
+let mobilemenu = document.querySelector(".mobile")
+let menuBtn = document.querySelector(".menuBtn")
+let menuBtnDisplay = true;
+
+menuBtn.addEventListener("click",()=>{
+    mobilemenu.classList.toggle("hidden")
+})
+
+
+//render news 
+function renderMain(arr){
+    let mainHTML = ''
+    for(let i = 0 ; i < arr.length ;i++){
+        if(arr[i].urlToImage){
+        mainHTML += ` <div class="card">
+                        <a href=${arr[i].url}>
+                        <img src=${arr[i].urlToImage} lazy="loading" />
+                        <h4>${arr[i].title}</h4>
+                        <div class="publishbyDate">
+                            <p>${arr[i].source.name}</p>
+                            <span>•</span>
+                            <p>${new Date(arr[i].publishedAt).toLocaleDateString()}</p>
+                        </div>
+                        <div class="desc">
+                           ${arr[i].description}
+                        </div>
+                        </a>
+                     </div>
+        `
+        }
+    }
+
+    document.querySelector("main").innerHTML = mainHTML
+}
+
+
+const searchBtn = document.getElementById("searchForm")
+const searchBtnMobile = document.getElementById("searchFormMobile")
+const searchInputMobile = document.getElementById("searchInputMobile") 
+const searchInput = document.getElementById("searchInput")
+
+searchBtn.addEventListener("submit",async(e)=>{
+    e.preventDefault()
+    console.log(searchInput.value)
+
+    const data = await fetchData(searchInput.value)
+    renderMain(data.articles)
+
+})
+searchBtnMobile.addEventListener("submit",async(e)=>{
+    e.preventDefault()
+    const data = await fetchData(searchInputMobile.value)
+    renderMain(data.articles)
+})
+
+
+async function Search(query){
+    const data = await fetchData(query)
+    renderMain(data.articles)
+}
+
+
+
+
+document.getElementById("bookmarkBtn").addEventListener("click", function() {
+    // Get the data of the card to be bookmarked (e.g., title, image, description)
+    var cardData = {
+      title: "Example Card",
+      image: "path/to/image.jpg",
+      description: "This is an example card"
+    };
+  
+    // Create the card element
+    var card = document.createElement("div");
+    card.className = "card";
+  
+    // Create HTML structure for the card
+    var titleElement = document.createElement("h2");
+    titleElement.textContent = cardData.title;
+  
+    var imageElement = document.createElement("img");
+    imageElement.src = cardData.image;
+  
+    var descriptionElement = document.createElement("p");
+    descriptionElement.textContent = cardData.description;
+  
+    // Append card elements to the bookmark list
+    card.appendChild(titleElement);
+    card.appendChild(imageElement);
+    card.appendChild(descriptionElement);
+  
+    document.getElementById("bookmarkList").appendChild(card);
+  });
+  
