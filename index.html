@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="/css/styles2.css">
+    <link rel="stylesheet" href="/css/styles1.css">
+    <link rel="stylesheet" href="/css/styles3.css">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/images (2)-.jpeg"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo"><a class="logo" href="index.html"><img src="/img/image.png"></a></div>
+          <div class="hamburger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+          </div>
+          <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              
+              <li onclick="Search('health')">Health</li>
+              <li onclick="Search('movies')">Movies</li>
+              <li onclick="Search('Education')">Education</li>
+              <li onclick="Search('Sports')">Sports</li>
+              <li onclick="Search('lifestyle')">lifestyle</li>
+              <li onclick="Search('politics')">politics</li>
+              <li onclick="Search('Foods')">Foods</li>
+              
+          </ul>
+          <div class="inputSearch">
+             <form id="searchFormMobile" id="searchInputMobile">
+                <input type="text" placeholder="Type to search..." />
+                <span class="material-symbols-outlined" onclick="search">
+                    search
+                    </span>
+             </form>
+          </div>
+      </nav>
+      
+      </header>
+    <!-- Main News Slider Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7 px-0">
+                <div class="owl-carousel main-carousel position-relative">
+                    <div class="position-relative overflow-hidden" style="height: 500px;">
+                        <img class="img-fluid h-100" src="/img/Estação_Antero_de_Quental_(15-07-2016)_03.jpg" style="object-fit: cover;">
+                        <div class="overlay">
+                            <div class="mb-2">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                    href="">politics</a>
+                                <a class="text-white" href="">jul 11, 2023</a>
+                            </div>
+                            <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="https://www.youm7.com/story/2023/7/11/%D9%85%D8%B5%D8%B1-%D8%AA%D8%AA%D9%88%D8%B3%D8%B9-%D9%81%D9%89-%D8%B4%D8%A8%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D8%AC%D8%B1-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%89-%D8%A7%D8%B3%D8%AA%D9%83%D9%85%D8%A7%D9%84-%D8%A2%D8%AE%D8%B1-%D9%85%D8%B1%D8%A7%D8%AD%D9%84-%D8%A7%D9%84%D8%AE%D8%B7/6237662">Egypt is expanding its electric traction networks.. Completion of the last phases of the third line of the metro and the current general opening.. </a>
+                        </div>
+                    </div>
+                    <div class="position-relative overflow-hidden" style="height: 500px;">
+                        <img class="img-fluid h-100" src="/img/Screenshot 2023-07-11 075450.png" style="object-fit: cover;">
+                        <div class="overlay">
+                            <div class="mb-2">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                    href="">Health</a>
+                                <a class="text-white" href="">Jul 18, 2023</a>
+                            </div>
+                            <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="https://www.wired.com/story/a-one-time-shot-for-type-2-diabetes-a-biotech-company-is-on-it/">A One-Time Shot for Type 2 Diabetes? A Biotech Company Is On It</a>
+                        </div>
+                    </div>
+                    <div class="position-relative overflow-hidden" style="height: 500px;">
+                        <img class="img-fluid h-100" src="/img/_130342587_whatsappimage2023-07-10at5.13.00pm.jpg.webp" style="object-fit: cover;">
+                        <div class="overlay">
+                            <div class="mb-2">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                    href="">politics</a>
+                                <a class="text-white" href="">Jul 11, 2023</a>
+                            </div>
+                            <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="https://www.bbc.com/news/world-europe-66155445">Nato membership for Ukraine a key question at Vilnius summit...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 px-0">
+                <div class="row mx-0">
+                    <div class="col-md-6 px-0">
+                        <div class="position-relative overflow-hidden" style="height: 250px;">
+                            <img class="img-fluid w-100 h-100" src="/img/_130343666_gettyimages-1515453060.jpg" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                        href="">sports</a>
+                                    <a class="text-white" href=""><small>Jul 10, 2023</small></a>
+                                </div>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="https://www.bbc.com/sport/football/66157071">Taylor Harwood-Bellis: Fulham and West Ham interested in Man City defender</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 px-0">
+                        <div class="position-relative overflow-hidden" style="height: 250px;">
+                            <img class="img-fluid w-100 h-100" src="/img/_130304656_mouse.jpg.webp" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                        href="">Science</a>
+                                    <a class="text-white" href=""><small>may 30 2023</small></a>
+                                </div>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="https://www.bbc.com/news/science-environment-66119980">Transparent mouse could improve cancer drug tests</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 px-0">
+                        <div class="position-relative overflow-hidden" style="height: 250px;">
+                            <img class="img-fluid w-100 h-100" src="/img/230626091941-01-japanese-chef-tokyo-taco-truck.jpg" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                        href="">Foods</a>
+                                    <a class="text-white" href=""><small>may 24, 2023</small></a>
+                                </div>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="https://edition.cnn.com/travel/mexican-tacos-tokyo-3hermanos-cmd/index.html">He left Japan and learned how to make tacos in Mexico. Now he owns the hottest taco truck in Tokyo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 px-0">
+                        <div class="position-relative overflow-hidden" style="height: 250px;">
+                            <img class="img-fluid w-100 h-100" src="/img/_130344797_f3b82f367b4f799b9fbb8141446010fc1ab3aeb20_0_6068_40451000x667.jpg.webp" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                        href="">politics</a>
+                                    <a class="text-white" href=""><small>Jul 11, 2023</small></a>
+                                </div>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="https://www.bbc.com/news/world-europe-66160319">Turkey backs Sweden's Nato membership - Stoltenberg</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main News Slider End -->
+
+
+    <!-- Breaking News Start -->
+    <div class="container-fluid bg-dark py-3 mb-3">
+        <div class="container">
+            <div class="row align-items-center bg-dark">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between">
+                        <div class="bg-primary text-dark text-center font-weight-medium py-2" style="width: 170px;">Breaking News</div>
+                        <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                            style="width: calc(100% - 170px); padding-right: 90px;">
+                            <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="https://edition.cnn.com/2023/07/09/politics/joe-biden-ukraine-nato-russia-cnntv/index.html">Biden says war with Russia must end before NATO can consider membership for Ukraine</a></div>
+                            <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="https://edition.cnn.com/2023/07/04/world/cambrian-predator-fossil-scn/index.html">Ancient shrimplike predator was misunderstood, according to new research</a></div>
+                            <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="https://edition.cnn.com/2023/07/10/tech/twitter-threads-future/index.html">Twitter’s future is in doubt as Threads tops 100 million users</a></div>
+                            <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="https://edition.cnn.com/2023/07/07/opinions/putin-russia-sco-power-threatened-ghitis/index.html">Putin faces a challenging task that threatens his power</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breaking News End -->
+        <!-- main  -->
+        <main></main>
+    <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Welcome to 7adotaa masria! We are a trusted source for the latest news and updates on various topics including politics, business, technology, sports, and entertainment. Our dedicated team of journalists works tirelessly to bring you accurate and reliable information from around the globe.</p>
+          </div>
+          <div class="footer-section-c">
+            <h3>Categories</h3>
+            <ul>
+                
+                <li onclick="Search('health')">Health</li>
+                <li onclick="Search('movies')">Movies</li>
+                <li onclick="Search('Education')">Education</li>
+                <li>`</li>
+                <li onclick="Search('Sports')">Sports</li>
+                <li onclick="Search('lifestyle')">lifestyle</li>
+                <li onclick="Search('politics')">politics</li>
+                <li onclick="Search('Foods')">Foods</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>Email: mahmoud.mohamed00700@gmail.com</li>
+              <li>what's app: +2 0112 937 6314</li>
+              <li>Phone: +2 01020571299</li>
+              <li>address: El-waraq, Giza , Egypt</li>
+            </ul>
+          </div>
+          <ul class="wrapper">
+            <li class="icon facebook">
+                <a href="https://www.facebook.com/mahmoudm007">
+                  <span><i class="fab fa-facebook-f"></i></span>
+                </a>
+              </li>
+              <li class="icon instagram">
+                <a href="https://www.instagram.com/mahmoud_m007">
+                  <span><i class="fab fa-instagram"></i></span>
+                </a>
+              </li>
+              <li class="icon linkedin">
+                <a href="https://www.linkedin.com">
+                  <span><i class="fab fa-linkedin"></i></span>
+                </a>
+              </li>
+              <li class="icon whats">
+                <a href="https://wa.link/wjytji">
+                  <span><i class="fab fa-whatsapp"></i></span>
+                </a>
+              </li>
+              <li class="icon twittr">
+                <a href="https://twitter.com/Mahmoud_m007">
+                  <span><i class="fab fa-twitter"></i></span>
+                </a>
+              </li>
+              
+              <li class="icon github">
+                <a href="https://github.com/Mahmoudm007">
+                  <span><i class="fab fa-github"></i></span>
+                  </a>
+              </li>              
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2022 7adotaa masria. All rights reserved.</p>
+        </div>
+      </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/js/main2.js"></script>
+    <script src="/js/main1.js"></script>
+</body>
+</html> 
