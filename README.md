@@ -2,6 +2,7 @@
 <h1 align="center">Hi 👋, I'm Mahmoud Mohamed</h1>
 
 - 🔭 I’m currently working on [7adota-website](https://github.com/Mahmoudm007/7adota-website.git)
+- and there is a link for [a video for the website](https://drive.google.com/drive/folders/1x3JbJufwLHRoATfxxpQBcfOP5KhnNpqc?usp=sharing)
 
 ## Features
 
